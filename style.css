@@ -1,0 +1,235 @@
+/* =========================
+   ESTILO GENERAL
+========================= */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+
+/* =========================
+   CABECERA
+========================= */
+
+.header{
+    background:#111;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    position:relative;
+    box-shadow:0 2px 5px rgba(0,0,0,0.3);
+}
+
+.btn-top-chofer{
+    position:absolute;
+    right:15px;
+    top:10px;
+    padding:8px 12px;
+    border:none;
+    border-radius:5px;
+    background:#444;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.btn-top-chofer:hover{
+    background:#666;
+}
+
+/* =========================
+   PANTALLAS
+========================= */
+
+.pantalla{
+    max-width:500px;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   BOTONES PRINCIPALES
+========================= */
+
+.btn-principal{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:8px;
+    background:#111;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.btn-principal:hover{
+    background:#222;
+}
+
+.btn-accion{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    background:#111;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.btn-accion:hover{
+    background:#333;
+}
+
+/* =========================
+   EMPRESAS
+========================= */
+
+.btn-empresa{
+    width:100%;
+    padding:20px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn-tpc{
+    background:#ff6600;
+    color:white;
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+
+.campo{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input[type=text],
+input[type=password],
+input[type=time],
+select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+/* =========================
+   CONTRASEÑA
+========================= */
+
+.password-box{
+    display:flex;
+}
+
+.password-box input{
+    flex:1;
+}
+
+.btn-ojo{
+    width:50px;
+    border:none;
+    background:#ddd;
+    cursor:pointer;
+}
+
+/* =========================
+   REVISION TECNICA
+========================= */
+
+.revision-item{
+    background:#f0f0f0;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+
+.revision-item input[type=file]{
+    margin-top:8px;
+}
+
+/* =========================
+   BOTON GPS
+========================= */
+
+.btn-iniciar{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    background:#00aa44;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn-iniciar:hover{
+    background:#008833;
+}
+
+/* =========================
+   MAPA
+========================= */
+
+#mapa{
+    height:400px;
+    width:100%;
+    border:2px solid #111;
+    border-radius:8px;
+    margin-top:15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:600px){
+
+    .pantalla{
+        margin:10px;
+    }
+
+    .header{
+        font-size:18px;
+    }
+
+}
+
+.btn-ruta {
+	width:100%;
+	background:#0077ff;
+	color:white;
+	border:none;
+	padding:15px;
+	margin-top:10px;
+	font-size:16px;
+	cursor:pointer;
+}
+
+.btn-ruta:hover {
+	background: #005fd1;
+}

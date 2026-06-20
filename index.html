@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAXOR</title>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        📍 JAXOR
+        <button class="btn-top-chofer" onclick="cambiarPantalla('pantalla-login-chofer')">
+            Chofer Login
+        </button>
+    </div>
+
+    <!-- INICIO -->
+    <div id="pantalla-inicio" class="pantalla">
+
+        <h2>¡Bienvenido a tu viaje seguro!</h2>
+
+        <p>
+            Calcula tu tiempo y viaja sin esperar bajo el frío o la lluvia.
+        </p>
+
+        <button class="btn-principal"
+            onclick="cambiarPantalla('pantalla-empresas')">
+
+            🚀 INICIAR VIAJE
+
+        </button>
+		
+		<button class="btn-accion"
+		onclick="abrirMapa('Mapa de Prueba')">
+		
+		🗺️ PROBAR MAPA
+
+        </button>
+
+    </div>
+
+    <!-- EMPRESAS -->
+    <div id="pantalla-empresas" class="pantalla">
+
+        <h2>Selecciona tu Transporte</h2>
+
+        <button class="btn-empresa btn-tpc"
+            onclick="cargarRutas('TPC')">
+
+            Bus TPC
+
+        </button>
+
+    </div>
+
+    <!-- RUTAS -->
+    <div id="pantalla-rutas" class="pantalla">
+
+        <h2 id="titulo-rutas">Rutas Disponibles</h2>
+
+        <div id="contenedor-rutas-botones"></div>
+
+    </div>
+
+    <!-- LOGIN CHOFER -->
+    <div id="pantalla-login-chofer" class="pantalla">
+
+        <h2>Ingreso de Conductores</h2>
+
+        <div class="campo">
+
+            <label>Usuario:</label>
+
+            <input type="text" id="user-chofer">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Contraseña:</label>
+
+            <div class="password-box">
+
+                <input type="password" id="pass-chofer">
+
+                <button class="btn-ojo"
+                    onclick="mostrarPassword()">
+
+                    👁️
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <button class="btn-accion"
+            onclick="validarChofer()">
+
+            INGRESAR
+
+        </button>
+
+    </div>
+
+    <!-- FORM CHOFER -->
+    <div id="pantalla-form-chofer" class="pantalla">
+
+        <h2>Revisión Técnica</h2>
+
+        <div class="campo">
+		
+		    <label>Empresa:</label>
+			
+			<input type="text"
+			       id="c-empresa"
+				   value="TPC"
+				   readonly>
+				   
+		</div>
+		
+        <div class="campo">
+
+            <label>Nombre:</label>
+
+            <input type="text" id="c-nombre">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Placa:</label>
+
+            <input type="text" id="c-placa">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Ruta:</label>
+
+            <input type="text" id="c-ruta">
+
+        </div>
+
+        <div class="campo">
+
+            <label>Hora:</label>
+
+            <input type="time" id="c-hora">
+
+        </div>
+
+        <hr>
+
+        <div class="revision-item">
+
+            <label>
+                <input type="checkbox" id="chk-frenos">
+                Frenos OK
+            </label>
+
+            <input type="file" accept="image/*">
+
+        </div>
+
+        <div class="revision-item">
+
+            <label>
+                <input type="checkbox" id="chk-aceite">
+                Aceite OK
+            </label>
+
+            <input type="file" accept="image/*">
+
+        </div>
+
+        <div class="revision-item">
+
+            <label>
+                <input type="checkbox" id="chk-llantas">
+                Llantas OK
+            </label>
+
+            <input type="file" accept="image/*">
+
+        </div>
+
+        <button id="btnRuta"
+            class="btn-iniciar"
+            onclick="alternarRuta()">
+
+            🟢 INICIAR RUTA
+
+        </button>
+
+    </div>
+
+    <!-- MAPA -->
+    <div id="pantalla-mapa" class="pantalla">
+
+        <h2 id="titulo-mapa-ruta">
+
+            Bus en Camino
+
+        </h2>
+
+        <div id="mapa"></div>
+
+    </div>
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/12.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.14.0/firebase-database-compat.js"></script>
+	
+	<script src="firebase.js"></script>
+	
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>
