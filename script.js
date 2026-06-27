@@ -180,7 +180,7 @@ function iniciarSeguimientoGPS(){
 
     idGPS = setInterval(function(){
 
-        navigator.geolocation.getCurrentPosition(
+        navigator.geolocation.watchPosition(
 
             function(posicion){
 				
