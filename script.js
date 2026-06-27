@@ -204,7 +204,7 @@ function iniciarSeguimientoGPS(){
 
         );
 
-    }, 5000);
+    }, 1000);
 
 }
 
